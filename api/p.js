@@ -26,7 +26,7 @@ async function coin(ca) {
   });
 }
 module.exports = async (req, res) => {
-  res.setHeader('content-type', 'application/json; charset=utf-8');
+  res.setHeader('content-type', 'application/json; charset=utf-8'); res.setHeader('access-control-allow-origin', '*');
   const ca = (process.env.PETS_CA || '').trim() || null, x = (process.env.PETS_X || '').trim().replace(/^@/, '') || null;
   const out = { cfg: { ca, x }, at: Date.now(), coin: null, board: [], errors: [] };
   await Promise.all([
