@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pets</title>
+<meta name="description" content="Pets ($PETS): a Solana memecoin for shelter pets. 100% of creator fees go to Best Friends Animal Society through donate.gg.">
+<meta property="og:title" content="Pets · every pet deserves a home">
+<meta property="og:description" content="A Solana memecoin for shelter pets. 100% of creator fees go to Best Friends Animal Society through donate.gg.">
+<meta property="og:image" content="https://pets.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pets.vercel.app/og.png">
+<meta name="theme-color" content="#FFF4E4">
+<link rel="icon" href="/favicon.png">
+<link rel="preload" href="/assets/fonts/fredoka700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/pets.css?v=1">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="l-sol" viewBox="0 0 24 24"><path d="m23.8764 18.0313-3.962 4.1393a.9201.9201 0 0 1-.306.2106.9407.9407 0 0 1-.367.0742H.4599a.4689.4689 0 0 1-.2522-.0733.4513.4513 0 0 1-.1696-.1962.4375.4375 0 0 1-.0314-.2545.4438.4438 0 0 1 .117-.2298l3.9649-4.1393a.92.92 0 0 1 .3052-.2102.9407.9407 0 0 1 .3658-.0746H23.54a.4692.4692 0 0 1 .2523.0734.4531.4531 0 0 1 .1697.196.438.438 0 0 1 .0313.2547.4442.4442 0 0 1-.1169.2297zm-3.962-8.3355a.9202.9202 0 0 0-.306-.2106.941.941 0 0 0-.367-.0742H.4599a.4687.4687 0 0 0-.2522.0734.4513.4513 0 0 0-.1696.1961.4376.4376 0 0 0-.0314.2546.444.444 0 0 0 .117.2297l3.9649 4.1394a.9204.9204 0 0 0 .3052.2102c.1154.049.24.0744.3658.0746H23.54a.469.469 0 0 0 .2523-.0734.453.453 0 0 0 .1697-.1961.4382.4382 0 0 0 .0313-.2546.4444.4444 0 0 0-.1169-.2297zM.46 6.7225h18.7815a.9411.9411 0 0 0 .367-.0742.9202.9202 0 0 0 .306-.2106l3.962-4.1394a.4442.4442 0 0 0 .117-.2297.4378.4378 0 0 0-.0314-.2546.453.453 0 0 0-.1697-.196.469.469 0 0 0-.2523-.0734H4.7596a.941.941 0 0 0-.3658.0745.9203.9203 0 0 0-.3052.2102L.1246 5.9687a.4438.4438 0 0 0-.1169.2295.4375.4375 0 0 0 .0312.2544.4512.4512 0 0 0 .1692.196.4689.4689 0 0 0 .2518.0739z"/></symbol>
+  <symbol id="l-x" viewBox="0 0 24 24"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></symbol>
+  <symbol id="paw" viewBox="0 0 40 40"><g><ellipse cx="20" cy="26" rx="9" ry="7.5"/><ellipse cx="9" cy="16" rx="3.6" ry="4.6"/><ellipse cx="16" cy="9.5" rx="3.6" ry="4.8"/><ellipse cx="24.5" cy="9.5" rx="3.6" ry="4.8"/><ellipse cx="31.5" cy="16" rx="3.6" ry="4.6"/></g></symbol>
+  <linearGradient id="g-sol" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9945ff"/><stop offset="1" stop-color="#14f195"/></linearGradient>
+</defs></svg>
+
+<div id="intro" aria-hidden="true"><div id="ipaws"></div><div class="tile" id="itile"><svg class="dog" viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="emi"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#emi)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></svg></div></div>
+<div id="prog"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" data-go="top"><span class="mini"><img src="/assets/mark.svg" alt=""></span><b>Pets</b></a>
+  <nav class="links" id="links">
+    <a href="#meter" data-go="meter">meter</a><a href="#why" data-go="why">why</a><a href="#how" data-go="how">how</a><a href="#journey" data-go="journey">journey</a><a href="#board" data-go="board">board</a><a href="#token" data-go="token">token</a><a href="#faq" data-go="faq">faq</a>
+  </nav>
+  <div class="nr">
+    <button class="ca hide" id="caPill" type="button" title="copy contract address"><i></i><span id="caTxt"></span></button>
+    <a class="btn sm ghost hide" id="xBtn" target="_blank" rel="noopener" aria-label="Pets on X"><svg class="lg"><use href="#l-x"/></svg></a>
+    <a class="btn sm blue mag" id="buyBtn" href="#meter" data-go="meter">see the meter</a>
+    <button class="burger" id="burger" aria-label="menu"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="pawbg" id="pawbg" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <div class="hcopy">
+        <p class="kick rv"><svg class="pw"><use href="#paw"/></svg>a Solana memecoin for shelter pets</p>
+        <h1 class="split">Every pet deserves a&nbsp;home.</h1>
+        <p class="lead rv">$PETS turns trading into help for shelter pets. 100% of creator fees go to <b>Best Friends Animal Society</b> through donate.gg, and every dollar shows up on the meter below.</p>
+        <div class="ctas rv"><a class="btn blue big mag" href="#meter" data-go="meter">see the meter</a><a class="btn big mag" href="#how" data-go="how">how it works</a></div>
+        <div class="stack rv">
+          <span><svg class="lg sol"><use href="#l-sol"/></svg>Solana</span>
+          <span class="pf"><i></i>pump.fun charity coin</span>
+          <span><img src="/assets/logos/donategg.svg" alt="" class="dg">routed by donate.gg</span>
+        </div>
+      </div>
+      <div class="hart">
+        <div class="halo"></div>
+        <div class="tile big" id="htile"><svg class="dog" viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="emh"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#emh)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></svg></div>
+        <div class="hearts" id="hearts" aria-hidden="true"></div>
+        <div class="count rv" id="count"><span class="ct">home for the holidays in</span><div class="cd"><b id="cdD">00</b><i>d</i><b id="cdH">00</b><i>h</i><b id="cdM">00</b><i>m</i><b id="cdS">00</b><i>s</i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mclip"><section class="marq" aria-label="pets"><div class="marq-in" id="marq"></div></section></div>
+
+  <section class="sec" id="meter">
+    <div class="wrap">
+      <p class="eyebrow rv">01 · the pet meter</p>
+      <h2 class="split">Every trade fills a bowl.</h2>
+      <p class="sub rv">Read straight from donate.gg, the service pump.fun uses to route charity coin fees. No number here is typed in by hand.</p>
+      <div class="meter rv">
+        <div class="mtop">
+          <div class="mleft">
+            <span class="mstat" id="mStat"><i></i>switches on the moment $PETS launches</span>
+            <div class="odo" id="odo" aria-live="polite"></div>
+            <p class="mcap">raised for shelter pets through donate.gg</p>
+            <div class="mkts" id="mkts"></div>
+          </div>
+          <div class="bowlwrap">
+            <svg class="bowl" viewBox="0 0 200 140" aria-hidden="true">
+              <defs><clipPath id="bowlclip"><path d="M24 64 h152 l-16 52 a12 12 0 0 1 -11.5 8.5 h-97 a12 12 0 0 1 -11.5 -8.5z"/></clipPath></defs>
+              <path d="M24 64 h152 l-16 52 a12 12 0 0 1 -11.5 8.5 h-97 a12 12 0 0 1 -11.5 -8.5z" fill="#2D5BFF"/>
+              <g clip-path="url(#bowlclip)"><rect id="bowlFill" x="0" y="124" width="200" height="70" fill="#C98A4B"/><g id="kibs" fill="#A86E37"></g></g>
+              <ellipse cx="100" cy="64" rx="76" ry="13" fill="#1D3FD1"/>
+              <ellipse cx="100" cy="62" rx="68" ry="9" fill="#13204A" opacity=".18"/>
+              <text x="100" y="104" text-anchor="middle" class="bowltxt" id="bowlTxt">PETS</text>
+            </svg>
+            <p class="bnext" id="bNext">next bowl: $1,000</p>
+          </div>
+        </div>
+        <ol class="flow">
+          <li><span class="fi">01</span><b>creator fees</b><span>Every trade of $PETS on pump.fun pays a small creator fee.</span><em id="fFees">on every trade</em></li>
+          <li><span class="fi">02</span><b><img src="/assets/logos/donategg.svg" alt="" class="dg">donate.gg</b><span>pump.fun sends the fee to donate.gg, which converts it for the charity.</span><em id="fPend">pending: —</em></li>
+          <li><span class="fi">03</span><b>Best Friends Animal Society</b><span>Finalized by donate.gg for the charity, recorded donation by donation.</span><em id="fDone">finalized: —</em></li>
+        </ol>
+        <div class="ladder" id="ladder"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="why">
+    <div class="wrap">
+      <p class="eyebrow rv">02 · why shelter pets</p>
+      <h2 class="split">The shelters are winning. They need the last push.</h2>
+      <p class="sub rv">From Best Friends Animal Society's national shelter data for 2025, published April 2026. It covers nearly all 4,000 U.S. shelters.</p>
+      <div class="stats">
+        <div class="st rv"><b data-n="4000000">0</b><span>dogs and cats found homes from U.S. shelters in 2025</span></div>
+        <div class="st rv"><b data-n="34000">0</b><span>fewer pets killed in shelters than the year before, the sharpest drop since 2020</span></div>
+        <div class="st rv"><b data-n="68" data-suf="%">0</b><span>of U.S. shelters reached no-kill: saving at least 90% of the pets they take in</span></div>
+        <div class="st rv"><b data-n="6000">0</b><span>shelter and rescue partners work with Best Friends across the country</span></div>
+      </div>
+      <p class="src rv">Source: <a href="https://bestfriends.org/who-we-are/media/new-data-shows-sharpest-drop-us-animal-shelter-deaths-2020" target="_blank" rel="noopener">Best Friends Animal Society, "New Data Shows Sharpest Drop in U.S. Animal Shelter Deaths Since 2020", April 15, 2026</a></p>
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <div class="wrap">
+      <p class="eyebrow rv">03 · how it works</p>
+      <h2 class="split">Four steps. Nothing to claim.</h2>
+      <div class="steps">
+        <article class="stp tilt rv"><span class="sn">1</span><div class="sic"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="26" rx="9" ry="7.5"/><ellipse cx="9" cy="16" rx="3.6" ry="4.6"/><ellipse cx="16" cy="9.5" rx="3.6" ry="4.8"/><ellipse cx="24.5" cy="9.5" rx="3.6" ry="4.8"/><ellipse cx="31.5" cy="16" rx="3.6" ry="4.6"/></g></svg></div><h3>launched as a Charity Coin</h3><p>$PETS launches on pump.fun with Best Friends Animal Society set as the charity, at launch.</p></article>
+        <article class="stp tilt rv"><span class="sn">2</span><div class="sic"><svg viewBox="0 0 40 40"><path d="M6 28 L16 18 L22 24 L34 10" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 10 h7 v7" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>every trade pays a fee</h3><p>Buys and sells pay pump.fun's creator fee, the same as any coin. Nobody has to remember to give.</p></article>
+        <article class="stp tilt rv"><span class="sn">3</span><div class="sic"><img src="/assets/logos/donategg.svg" alt=""></div><h3>donate.gg routes 100%</h3><p>Instead of a creator wallet, the fee goes to donate.gg, which converts it and pays the charity.</p></article>
+        <article class="stp tilt rv"><span class="sn">4</span><div class="sic"><svg viewBox="0 0 40 40"><path d="M20 34 c-9 -6 -15 -11 -15 -17 a7 7 0 0 1 15 -2 a7 7 0 0 1 15 2 c0 6 -6 11 -15 17z" fill="currentColor"/></svg></div><h3>it lands, in public</h3><p>Every donation is on-chain and on donate.gg's public board. The meter above shows it live.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey" id="journey">
+    <div class="jhead wrap"><p class="eyebrow rv">04 · the journey</p><h2 class="split">From a kennel to a couch.</h2></div>
+    <div class="jpin" id="jpin"><div class="jtrack" id="jtrack"><article class="jp" data-i="0"><div class="jart"><svg class="scene" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#13204A" stroke-width="2.4" stroke-linecap="round"><rect x="8" y="10" width="84" height="80" rx="10"/><line x1="20" y1="12" x2="20" y2="88"/><line x1="32" y1="12" x2="32" y2="88"/><line x1="44" y1="12" x2="44" y2="88"/><line x1="56" y1="12" x2="56" y2="88"/><line x1="68" y1="12" x2="68" y2="88"/><line x1="80" y1="12" x2="80" y2="88"/></g><g transform="translate(34 30) scale(0.62)"><defs><mask id="ems0"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#ems0)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></g></svg></div><div class="jtx"><span class="jn">01 · arrives</span><h3>They come in.</h3><p>Lost, surrendered or found on the street. A shelter takes them in, and the clock starts.</p></div></article><article class="jp" data-i="1"><div class="jart"><svg class="scene" viewBox="0 0 100 100" aria-hidden="true"><g><path d="M14 66 h72 l-8 20 a6 6 0 0 1 -6 4 h-44 a6 6 0 0 1 -6 -4z" fill="#2D5BFF"/><ellipse cx="50" cy="66" rx="36" ry="7" fill="#1D3FD1"/><g class="kib" fill="#C98A4B"><circle cx="38" cy="62" r="4"/><circle cx="47" cy="59" r="4.4"/><circle cx="56" cy="62" r="4"/><circle cx="62" cy="58" r="3.6"/><circle cx="44" cy="64" r="3.6"/></g></g><g transform="translate(10 30) scale(0.62)"><defs><mask id="ems1"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#ems1)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></g></svg></div><div class="jtx"><span class="jn">02 · fed</span><h3>Every bowl, every day.</h3><p>Food is one of the biggest running costs a shelter has. It never stops, for any animal.</p></div></article><article class="jp" data-i="2"><div class="jart"><svg class="scene" viewBox="0 0 100 100" aria-hidden="true"><g><circle cx="76" cy="24" r="16" fill="#fff" stroke="#13204A" stroke-width="2.4"/><rect x="72" y="14" width="8" height="20" rx="2" fill="#F0564A"/><rect x="66" y="20" width="20" height="8" rx="2" fill="#F0564A"/></g><g transform="translate(14 30) scale(0.62)"><defs><mask id="ems2"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#ems2)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></g></svg></div><div class="jtx"><span class="jn">03 · cared for</span><h3>Vaccines, vets, second chances.</h3><p>Spay and neuter, shots, and treatment for the ones who arrive hurt or sick.</p></div></article><article class="jp" data-i="3"><div class="jart"><svg class="scene" viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate(-8 76 24)"><rect x="56" y="10" width="40" height="28" rx="6" fill="#FFC93C" stroke="#13204A" stroke-width="2.4"/><path d="M76 31 c-6 -4 -9 -7 -9 -10 a4 4 0 0 1 9 -1 a4 4 0 0 1 9 1 c0 3 -3 6 -9 10z" fill="#F0564A"/></g><g transform="translate(14 30) scale(0.62)"><defs><mask id="ems3"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#ems3)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></g></svg></div><div class="jtx"><span class="jn">04 · seen</span><h3>Fosters, transport, adoption days.</h3><p>Pets move to homes and shelters with room, and get in front of people who want them.</p></div></article><article class="jp" data-i="4"><div class="jart"><svg class="scene" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#13204A" stroke-width="2.6" stroke-linejoin="round"><path d="M10 48 L50 12 L90 48"/><path d="M18 42 V90 H82 V42"/></g><path d="M50 30 c-7 -5 -11 -8 -11 -12 a5 5 0 0 1 11 -1 a5 5 0 0 1 11 1 c0 4 -4 7 -11 12z" fill="#F0564A"/><g transform="translate(30 30) scale(0.62)"><defs><mask id="ems4"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#ems4)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></g></svg></div><div class="jtx"><span class="jn">05 · home</span><h3>A home.</h3><p>The goal for every one of them. In 2025, 68% of U.S. shelters reached no-kill: saving at least 90% of the pets they take in.</p></div></article></div><div class="jbar"><i id="jfill"></i></div></div>
+  </section>
+
+  <section class="sec" id="board">
+    <div class="wrap">
+      <p class="eyebrow rv">05 · the board</p>
+      <h2 class="split">Charity coins that already gave.</h2>
+      <p class="sub rv">Live from donate.gg's Charity Coins board. Real totals, delivered by real coins. $PETS joins this list with its first donation.</p>
+      <div class="brd rv"><div class="bhead"><span>#</span><span>coin</span><span>raised</span><span>donations</span><span>last gift</span></div><div id="brows"><p class="muted">reading the board…</p></div></div>
+      <p class="src rv">Board data: <a href="https://www.donate.gg/charity-coins" target="_blank" rel="noopener">donate.gg/charity-coins</a> · refreshes every minute</p>
+    </div>
+  </section>
+
+  <section class="sec" id="token">
+    <div class="wrap tokg">
+      <div>
+        <p class="eyebrow rv">06 · token</p>
+        <h2 class="split">$PETS</h2>
+        <p class="sub rv">One coin, one cause. The fees are the whole point.</p>
+        <div class="tlinks rv" id="tlinks"><a class="btn" href="https://www.donate.gg/charity-coins" target="_blank" rel="noopener"><img src="/assets/logos/donategg.svg" alt="" class="dg">donate.gg board ↗</a></div>
+      </div>
+      <dl class="tcard rv">
+        <div><dt>name</dt><dd>Pets</dd></div>
+        <div><dt>ticker</dt><dd>$PETS</dd></div>
+        <div><dt>chain</dt><dd><svg class="lg sol"><use href="#l-sol"/></svg>Solana</dd></div>
+        <div><dt>launchpad</dt><dd>pump.fun · Charity Coin</dd></div>
+        <div><dt>supply</dt><dd>1,000,000,000</dd></div>
+        <div><dt>creator fees</dt><dd>100% to Best Friends Animal Society via donate.gg</dd></div>
+        <div class="hide" id="tCa"><dt>contract</dt><dd><button class="cab" id="caBig" type="button"></button></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap faqg">
+      <div class="fh"><p class="eyebrow rv">07 · faq</p><h2 class="split">Good questions.</h2><p class="sub rv">Short answers, all of them true today.</p></div>
+      <div class="faq"><details class="rv"><summary>What is Pets?</summary><p>A memecoin on Solana, launched as a pump.fun Charity Coin. Every creator fee it earns goes to Best Friends Animal Society through donate.gg, and the meter on this page shows the total as it lands.</p></details><details class="rv"><summary>Where does the money go, exactly?</summary><p>Every trade on pump.fun pays a small creator fee. On a Charity Coin, pump.fun sends that fee to donate.gg instead of the creator. donate.gg converts it and pays the charity, keeping a processing fee for doing that.</p></details><details class="rv"><summary>How do I check it myself?</summary><p>Every charity coin has its total on donate.gg's public Charity Coins board, and every transfer is on-chain on Solscan. The meter here reads donate.gg directly and never shows a number it did not get from there.</p></details><details class="rv"><summary>Why Best Friends Animal Society?</summary><p>They lead the U.S. no-kill movement, work with a network of 6,000 shelter and rescue partners, and publish the national shelter data this page quotes.</p></details><details class="rv"><summary>Can the charity be changed later?</summary><p>The charity is set when the coin launches on pump.fun. donate.gg shows the active setting for every coin, so anyone can check it.</p></details><details class="rv"><summary>Is Pets affiliated with Best Friends, pump.fun or donate.gg?</summary><p>No. Pets is independent. Best Friends is the listed recipient on donate.gg. A donation is not an endorsement, and none of them run or promote this coin.</p></details><details class="rv"><summary>Is $PETS an investment?</summary><p>No. It is a memecoin, and memecoins can go to zero. The only promise is where the creator fees go. Nothing here is financial advice.</p></details></div>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <div class="pawrow" aria-hidden="true"><svg style="--d:0.0s"><use href="#paw"/></svg><svg style="--d:0.18s"><use href="#paw"/></svg><svg style="--d:0.36s"><use href="#paw"/></svg><svg style="--d:0.54s"><use href="#paw"/></svg><svg style="--d:0.72s"><use href="#paw"/></svg><svg style="--d:0.8999999999999999s"><use href="#paw"/></svg><svg style="--d:1.08s"><use href="#paw"/></svg><svg style="--d:1.26s"><use href="#paw"/></svg><svg style="--d:1.44s"><use href="#paw"/></svg></div>
+    <div class="wrap ctain">
+      <div class="tile mid"><svg class="dog" viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="emc"><rect width="100" height="100" fill="#fff"/><circle cx="53" cy="37" r="4.3" fill="#000"/></mask></defs><g transform="translate(-2 0)"><g mask="url(#emc)" fill="#FFF3DF"><rect x="25" y="24" width="18" height="58" rx="9"/><circle cx="50" cy="40" r="22"/><ellipse cx="70" cy="47" rx="12" ry="9.5"/><rect x="25" y="24" width="20" height="30" rx="4"/></g><ellipse class="lid" cx="53" cy="37" rx="4.8" ry="4.8" fill="#FFF3DF"/><ellipse cx="80.5" cy="44.5" rx="4.6" ry="3.8" fill="#13204A"/><path class="ear" d="M30 21 C 21 23, 18 38, 21 51 C 23 58, 31 58, 33 50 C 35 41, 37 30, 38 24 Z" fill="#F2D2A6"/><g class="tag"><rect x="23.5" y="62" width="21" height="5.2" rx="2.6" fill="#FFC93C"/><circle cx="34" cy="71.5" r="4.2" fill="#FFC93C"/></g></g></svg></div>
+      <h2 class="split">No pet should spend Christmas in a kennel.</h2>
+      <div class="ctas rv"><a class="btn blue big mag" href="#meter" data-go="meter">see the meter</a><a class="btn big mag" href="https://www.donate.gg/charity-coins" target="_blank" rel="noopener">the donate.gg board ↗</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap"><div class="wordmark" id="bigw" aria-hidden="true">Pets</div></div></footer>
+<script src="/assets/vendor/gsap.min.js"></script>
+<script src="/assets/vendor/ScrollTrigger.min.js"></script>
+<script src="/assets/vendor/lenis.min.js"></script>
+<script>window.PETS_MARQ = ['every pet deserves a home', 'no pet should spend christmas in a kennel', '100% of creator fees to shelter pets', 'on-chain, out loud', 'adopt · foster · give'];</script>
+<script src="/assets/pets.js?v=1"></script>
+</body>
+</html>
