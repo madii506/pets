@@ -31,9 +31,11 @@ $$('.split').forEach(h => { h.innerHTML = h.innerHTML.split(/(<br>)/).map(p => p
 if (!reduced) gsap.set('.split .wd > span', { yPercent: 115 });
 
 // ------------------------------------------------ the dog: wag, blink, tag swing
-const wag = (root, big = 1) => { const ear = root.querySelector('.ear'), tag = root.querySelector('.tag'); if (!ear) return;
-  gsap.timeline().to(ear, { rotate: -16 * big, duration: .14, ease: 'power2.out' }).to(ear, { rotate: 10 * big, duration: .16, ease: 'power2.inOut' }).to(ear, { rotate: -7 * big, duration: .14 }).to(ear, { rotate: 0, duration: .5, ease: 'elastic.out(1,.4)' });
-  if (tag) gsap.fromTo(tag, { rotate: 0 }, { keyframes: [{ rotate: 14, duration: .18 }, { rotate: -9, duration: .2 }, { rotate: 0, duration: .6, ease: 'elastic.out(1,.35)' }] }); };
+const wag = (root, big = 1) => { const ear = root.querySelector('.ear'), tag = root.querySelector('.tag'), ce = root.querySelectorAll('.earL, .earR');
+  if (ce.length) gsap.timeline().to(ce, { rotate: i => (i ? 14 : -14) * big, duration: .1 }).to(ce, { rotate: 0, duration: .6, ease: 'elastic.out(1,.35)' });
+  if (tag) gsap.fromTo(tag, { rotate: 0 }, { keyframes: [{ rotate: 14, duration: .18 }, { rotate: -9, duration: .2 }, { rotate: 0, duration: .6, ease: 'elastic.out(1,.35)' }] });
+  if (!ear) return;
+  gsap.timeline().to(ear, { rotate: -16 * big, duration: .14, ease: 'power2.out' }).to(ear, { rotate: 10 * big, duration: .16, ease: 'power2.inOut' }).to(ear, { rotate: -7 * big, duration: .14 }).to(ear, { rotate: 0, duration: .5, ease: 'elastic.out(1,.4)' }); };
 const blink = root => { const l = root.querySelector('.lid'); if (l) gsap.timeline().to(l, { scaleY: 1, duration: .07 }).to(l, { scaleY: 0, duration: .12, delay: .05 }); };
 
 // ------------------------------------------------ intro: paw prints walk in, the tile pops, wags, and lands in the hero
@@ -73,7 +75,10 @@ function motion(fromIntro) {
   gsap.fromTo('#bigw', { backgroundSize: '0% 100%' }, { backgroundSize: '100% 100%', ease: 'none', scrollTrigger: { trigger: '#bigw', start: 'top bottom', end: 'max', scrub: true } });
   gsap.to('.halo', { scale: 1.12, opacity: .8, duration: 2.4, yoyo: true, repeat: -1, ease: 'sine.inOut' });
   ScrollTrigger.create({ trigger: '.cta', start: 'top 70%', onEnter: () => wag($('.cta .tile'), 1.3) });
-  const ht = $('#htile');
+  const ht = $('#htile'), ct = $('#ctile');
+  gsap.from([ct, '.badge'], { scale: 0, rotate: -40, duration: .9, ease: 'back.out(1.8)', stagger: .12, delay: fromIntro ? .5 : .2, clearProps: 'scale' });
+  ct.addEventListener('pointerenter', () => wag(ct, 1.2)); setInterval(() => { if (!document.hidden) { blink(ct); setTimeout(() => wag(ct, .9), 300); } }, 5200);
+  gsap.to(ct, { y: -14, rotate: 4, duration: 2.6, yoyo: true, repeat: -1, ease: 'sine.inOut' });
   gsap.to(ht, { yPercent: 12, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   setInterval(() => { if (!document.hidden) { blink(ht); if (Math.random() < .5) setTimeout(() => wag(ht, .8), 400); } }, 3600);
   ht.addEventListener('pointerenter', () => { wag(ht, 1.3); heart(); heart(); });

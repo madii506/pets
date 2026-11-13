@@ -20,7 +20,9 @@ img.dg { width: 20px; height: 20px; }
 .tile svg.dog { width: 88%; height: auto; overflow: visible; }
 .dog .ear { transform-box: fill-box; transform-origin: 70% 6%; }
 .dog .tag { transform-box: fill-box; transform-origin: 50% 0; }
-.dog .lid { transform-box: fill-box; transform-origin: 50% 50%; transform: scaleY(0); }
+.lid { transform-box: fill-box; transform-origin: 50% 50%; transform: scaleY(0); }
+.earL, .earR { transform-box: fill-box; transform-origin: 50% 100%; }
+.tile svg.cat { width: 88%; height: auto; overflow: visible; }
 
 /* intro: paw prints walk in, the tile pops, then it flies into the hero */
 #intro { position: fixed; inset: 0; z-index: 100; background: var(--bg); overflow: hidden; }
@@ -82,7 +84,7 @@ h1 .wd:nth-last-child(1) > span { color: var(--blue); }
 @keyframes marq { to { transform: translateX(-50%); } }
 
 /* sections */
-.sec { padding: clamp(90px, 11vw, 150px) 0; position: relative; }
+.sec { padding: clamp(80px, 9vw, 130px) 0; position: relative; }
 .eyebrow { display: inline-block; font: 600 13px/1 JB, monospace; color: var(--blue); letter-spacing: .03em; margin: 0 0 16px; padding: 7px 11px; border-radius: 9px; background: rgba(45, 91, 255, .08); }
 h2 { font: 700 clamp(40px, 5.6vw, 76px)/1 FR, sans-serif; letter-spacing: -.03em; margin: 0 0 18px; max-width: 960px; }
 .sub { font-size: clamp(16.5px, 1.3vw, 19px); color: #4A4E6B; max-width: 660px; margin: 0 0 48px; }
@@ -199,5 +201,15 @@ h2 { font: 700 clamp(40px, 5.6vw, 76px)/1 FR, sans-serif; letter-spacing: -.03em
 }
 @media (max-width: 520px) { .wrap { width: calc(100% - 32px); } .stats, .steps, .ladder { grid-template-columns: 1fr; } .marq-in span { font-size: 22px; } .btn.big { height: 52px; font-size: 16.5px; padding: 0 22px; } .cd { font-size: 22px; } .nr .btn.blue { display: none; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .js .rv { opacity: 1; transform: none; } }
-.scene g[mask] { fill: var(--blue); } .scene .lid { fill: var(--blue); } .scene .ear { fill: var(--deep); }
+.scene.dogs g[mask] { fill: var(--blue); } .scene.dogs .lid { fill: var(--blue); } .scene.dogs .ear { fill: var(--deep); }
 .jp:nth-child(5) .scene g[mask], .jp:nth-child(5) .scene .lid { fill: var(--cream); } .jp:nth-child(5) .scene .ear { fill: var(--tan); } .jp:nth-child(5) .scene [stroke="#13204A"], .jp:nth-child(5) .scene g[stroke] { stroke: var(--cream); }
+
+/* hero cat, badge, cta duo */
+.tile.cat { position: absolute; left: 2%; bottom: 10%; width: min(150px, 30vw); aspect-ratio: 1; border-radius: 26%; background: var(--yel); transform: rotate(9deg); box-shadow: 0 30px 50px -28px rgba(160, 110, 0, .6); z-index: 2; }
+.badge { position: absolute; top: 4%; right: 2%; width: 118px; height: 118px; z-index: 3; animation: spin 16s linear infinite; }
+.badge text { font: 700 9.6px JB, monospace; letter-spacing: .14em; fill: var(--ink); }
+@keyframes spin { to { transform: rotate(360deg); } }
+body.intro .tile.cat, body.intro .badge { opacity: 0; }
+.duo { display: flex; gap: 18px; margin-bottom: 30px; } .duo .tile.mid { margin-bottom: 0; } .tile.mid.cat2 { background: var(--yel); transform: rotate(7deg); }
+.lead { max-width: 480px; }
+@media (max-width: 860px) { .tile.cat { width: 92px; left: 6%; bottom: 4%; } .badge { width: 84px; height: 84px; right: 6%; top: 0; } }
